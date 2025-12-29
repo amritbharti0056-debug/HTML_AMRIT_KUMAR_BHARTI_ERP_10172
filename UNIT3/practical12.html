@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Conditionals and Loops</title>
+</head>
+<body>
+//Amrit kumar Bharti
+//erp-10172
+    <h1>JavaScript Conditionals & Loops</h1>
+
+    <h3>Conditional Statement (if–else)</h3>
+    <p id="condition"></p>
+
+    <h3>For Loop</h3>
+    <p id="forLoop"></p>
+
+    <h3>While Loop</h3>
+    <p id="whileLoop"></p>
+
+    <h3>Do While Loop</h3>
+    <p id="doWhileLoop"></p>
+
+    <script>
+        // Conditional Statement
+        let num = 7;
+        if (num % 2 === 0) {
+            document.getElementById("condition").innerHTML =
+                num + " is an Even number";
+        } else {
+            document.getElementById("condition").innerHTML =
+                num + " is an Odd number";
+        }
+
+        // For Loop
+        let forText = "";
+        for (let i = 1; i <= 5; i++) {
+            forText += i + " ";
+        }
+        document.getElementById("forLoop").innerHTML =
+            "For Loop Output: " + forText;
+
+        // While Loop
+        let j = 1;
+        let whileText = "";
+        while (j <= 5) {
+            whileText += j + " ";
+            j++;
+        }
+        document.getElementById("whileLoop").innerHTML =
+            "While Loop Output: " + whileText;
+
+        // Do While Loop
+        let k = 1;
+        let doText = "";
+        do {
+            doText += k + " ";
+            k++;
+        } while (k <= 5);
+
+        document.getElementById("doWhileLoop").innerHTML =
+            "Do While Loop Output: " + doText;
+    </script>
+
+</body>
+</html>
