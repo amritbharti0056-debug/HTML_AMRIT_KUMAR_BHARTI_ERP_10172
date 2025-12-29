@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Create & Manipulate</title>
+    <style>
+        ul {
+            margin-top: 10px;
+        }
+        li {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+//Amrit kumar Bharti
+//erp-10172
+    <h1>DOM Manipulation Example</h1>
+
+    <button onclick="addItem()">Add Item</button>
+    <button onclick="removeItem()">Remove Last Item</button>
+    <button onclick="modifyItem()">Modify First Item</button>
+
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <script>
+        // Append (Create + Add)
+        function addItem() {
+            let li = document.createElement("li");   // create element
+            li.innerHTML = "New Item";
+            document.getElementById("list").appendChild(li); // append
+        }
+
+        // Remove child
+        function removeItem() {
+            let list = document.getElementById("list");
+            if (list.lastElementChild) {
+                list.removeChild(list.lastElementChild);
+            }
+        }
+
+        // Modify child
+        function modifyItem() {
+            let list = document.getElementById("list");
+            if (list.firstElementChild) {
+                list.firstElementChild.innerHTML = "Modified Item";
+            }
+        }
+    </script>
+
+</body>
+</html>
