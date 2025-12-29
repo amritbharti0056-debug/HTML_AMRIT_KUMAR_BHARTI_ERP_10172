@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions and Scope in JavaScript</title>
+</head>
+<body>
+//Amrit kumar Bharti
+//erp-10172
+    <h1>JavaScript Functions & Scope</h1>
+
+    <p id="output"></p>
+
+    <script>
+        // Global variable (var)
+        var globalVar = "I am Global";
+
+        // User-defined function
+        function showScope() {
+
+            // Function scope (var)
+            var functionVar = "I am Function Scoped (var)";
+
+            // Block scope (let and const)
+            if (true) {
+                let blockLet = "I am Block Scoped (let)";
+                const blockConst = "I am Block Scoped (const)";
+
+                document.getElementById("output").innerHTML =
+                    globalVar + "<br>" +
+                    functionVar + "<br>" +
+                    blockLet + "<br>" +
+                    blockConst;
+            }
+
+            // ❌ blockLet and blockConst cannot be accessed here
+        }
+
+        // Invoke (call) the function
+        showScope();
+    </script>
+
+</body>
+</html>
