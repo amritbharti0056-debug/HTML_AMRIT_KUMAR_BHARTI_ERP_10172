@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Hide & Toggle Class</title>
+//Amrit kumar Bharti
+//erp-10172
+    <style>
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        /* Toggle style class */
+        .highlight {
+            background-color: yellow;
+            color: red;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .box {
+            border: 2px solid black;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Show / Hide & Toggle Class Demo</h1>
+
+    <button onclick="toggleVisibility()">Show / Hide Text</button>
+    <button onclick="toggleStyle()">Toggle Style</button>
+
+    <div id="myBox" class="box">
+        This is a sample content box.
+    </div>
+
+    <script>
+        // Show / Hide element
+        function toggleVisibility() {
+            let box = document.getElementById("myBox");
+            box.classList.toggle("hidden");
+        }
+
+        // Toggle CSS class
+        function toggleStyle() {
+            let box = document.getElementById("myBox");
+            box.classList.toggle("highlight");
+        }
+    </script>
+
+</body>
+</html>
