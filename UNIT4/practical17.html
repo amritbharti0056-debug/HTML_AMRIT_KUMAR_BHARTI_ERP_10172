@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Listener Demo</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+//Amrit kumar Bharti
+//erp-10172
+    <h1>Event Listener Example</h1>
+
+    <button id="addBtn">Add Events</button>
+    <button id="removeBtn">Remove Events</button>
+
+    <div id="box" class="box">Hover Me</div>
+
+    <p id="keyOutput">Press any key</p>
+
+    <script>
+        let box = document.getElementById("box");
+        let keyOutput = document.getElementById("keyOutput");
+
+        // Mouse event functions
+        function mouseOver() {
+            box.style.backgroundColor = "orange";
+            box.innerHTML = "Mouse Over";
+        }
+
+        function mouseOut() {
+            box.style.backgroundColor = "lightblue";
+            box.innerHTML = "Hover Me";
+        }
+
+        // Keyboard event function
+        function keyPress(event) {
+            keyOutput.innerHTML = "Key Pressed: " + event.key;
+        }
+
+        // Add event listeners
+        document.getElementById("addBtn").addEventListener("click", function () {
+            box.addEventListener("mouseover", mouseOver);
+            box.addEventListener("mouseout", mouseOut);
+            document.addEventListener("keydown", keyPress);
+            alert("Event listeners added");
+        });
+
+        // Remove event listeners
+        document.getElementById("removeBtn").addEventListener("click", function () {
+            box.removeEventListener("mouseover", mouseOver);
+            box.removeEventListener("mouseout", mouseOut);
+            document.removeEventListener("keydown", keyPress);
+            alert("Event listeners removed");
+        });
+    </script>
+
+</body>
+</html>
