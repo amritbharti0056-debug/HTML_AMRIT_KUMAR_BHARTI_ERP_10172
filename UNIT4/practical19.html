@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas Drawing Example</title>
+</head>
+<body>
+//Amrit kumar Bharti
+//erp-10172
+    <h1>Canvas Drawing</h1>
+
+    <canvas id="myCanvas" width="400" height="300" style="border:1px solid #000;">
+        Your browser does not support the canvas tag.
+    </canvas>
+
+    <script>
+        // Get canvas and context
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Draw a filled rectangle
+        ctx.fillStyle = "skyblue";
+        ctx.fillRect(20, 20, 120, 80);
+
+        // Draw a rectangle border
+        ctx.strokeStyle = "black";
+        ctx.strokeRect(20, 20, 120, 80);
+
+        // Draw a filled circle
+        ctx.beginPath();
+        ctx.arc(220, 60, 40, 0, Math.PI * 2);
+        ctx.fillStyle = "green";
+        ctx.fill();
+        ctx.stroke();
+
+        // Draw a line
+        ctx.beginPath();
+        ctx.moveTo(50, 150);
+        ctx.lineTo(350, 150);
+        ctx.strokeStyle = "red";
+        ctx.lineWidth = 3;
+        ctx.stroke();
+
+        // Draw text
+        ctx.fillStyle = "purple";
+        ctx.font = "16px Arial";
+        ctx.fillText("Hello Canvas!", 140, 230);
+    </script>
+
+</body>
+</html>
