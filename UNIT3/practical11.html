@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arithmetic Operations</title>
+</head>
+<body>
+//Amrit kumar Bharti
+//erp-10172
+    <h1>Basic Arithmetic Calculator</h1>
+
+    <label>Enter First Number:</label><br>
+    <input type="number" id="num1"><br><br>
+
+    <label>Enter Second Number:</label><br>
+    <input type="number" id="num2"><br><br>
+
+    <button onclick="add()">Add</button>
+    <button onclick="subtract()">Subtract</button>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+
+    <h2>Result: <span id="result">0</span></h2>
+
+    <script>
+        function add() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = a + b;
+        }
+
+        function subtract() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = a - b;
+        }
+
+        function multiply() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = a * b;
+        }
+
+        function divide() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = a / b;
+        }
+    </script>
+
+</body>
+</html>
